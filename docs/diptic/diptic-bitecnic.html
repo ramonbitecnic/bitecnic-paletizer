@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiTecnic Paletizado - Díptico</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a365d 0%, #2d5aa0 100%);
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #1a365d 0%, #2d5aa0 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+        .header h2 {
+            font-size: 20px;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        /* CONTENT GRID */
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+        
+        .section {
+            padding: 40px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .section:nth-child(odd) {
+            border-right: 1px solid #e2e8f0;
+        }
+        
+        .section h3 {
+            color: #1a365d;
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #28a745;
+            display: inline-block;
+        }
+        
+        .section p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #4a5568;
+            margin-bottom: 15px;
+        }
+        
+        /* FEATURES */
+        .features {
+            list-style: none;
+            margin-top: 20px;
+        }
+        .features li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            border-bottom: 1px solid #edf2f7;
+            font-size: 15px;
+        }
+        .features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        /* PRODUCTS */
+        .product {
+            background: #f7fafc;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border-left: 5px solid #1a365d;
+        }
+        .product h4 {
+            color: #1a365d;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .product .subtitle {
+            color: #718096;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        /* SPECS TABLE */
+        .specs {
+            width: 100%;
+            margin-top: 15px;
+            border-collapse: collapse;
+        }
+        .specs td {
+            padding: 10px;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 14px;
+        }
+        .specs td:first-child {
+            font-weight: 600;
+            color: #1a365d;
+            width: 40%;
+        }
+        
+        /* IMAGE */
+        .image-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        /* FOOTER */
+        .footer {
+            background: #1a365d;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .footer h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        .footer p {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+        .footer .contact {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .footer .contact strong {
+            color: #90cdf4;
+        }
+        
+        /* PRINT STYLES */
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; }
+            .section { page-break-inside: avoid; }
+        }
+        
+        /* HIGHLIGHT */
+        .highlight {
+            background: linear-gradient(120deg, #90cdf4 0%, #90cdf4 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 40%;
+            background-position: 0 88%;
+            padding: 0 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <h1>ROBOTS DE PALETIZADO COLABORATIVO</h1>
+            <h2>Modernizamos tu negocio con automatización inteligente</h2>
+        </div>
+        
+        <!-- CONTENT -->
+        <div class="content">
+            
+            <!-- LEFT COLUMN -->
+            <div class="section">
+                <h3>¿Por qué elegir BiTecnic?</h3>
+                <p>Combinamos <span class="highlight">tecnología accesible</span> con experiencia local para ayudarte a automatizar de forma sencilla y rentable.</p>
+                
+                <ul class="features">
+                    <li><strong>Soluciones Económicas:</strong> Robots multimarca adaptados a PYMES</li>
+                    <li><strong>Experiencia Local:</strong> Años de experiencia en automatización</li>
+                    <li><strong>Soporte Cercano:</strong> Desde Sabadell, para toda España</li>
+                    <li><strong>Resultados Medibles:</strong> ROI rápido garantizado</li>
+                </ul>
+                
+                <div class="image-container">
+                    <img src="images/robot-paletizado.jpg" alt="Robot paletizado colaborativo" style="max-height: 200px;">
+                </div>
+            </div>
+            
+            <!-- RIGHT COLUMN -->
+            <div class="section">
+                <h3>Nuestras Soluciones</h3>
+                
+                <div class="product">
+                    <h4>ELITE ROBOTS - Serie CP</h4>
+                    <div class="subtitle">Paletizador llave en mano</div>
+                    <p style="font-size: 14px;">Solución modular y económica. Configuración en menos de 10 minutos sin programación.</p>
+                    
+                    <table class="specs">
+                        <tr><td>Capacidad</td><td>Hasta 30 kg</td></tr>
+                        <tr><td>Seguridad</td><td>ISO 10218 & 13849</td></tr>
+                        <tr><td>Columnas</td><td>Fijas o telescópicas</td></tr>
+                    </table>
+                </div>
+                
+                <div class="product">
+                    <h4>WARSONCO - WSC-MD30</h4>
+                    <div class="subtitle">Cobot compacto</div>
+                    <p style="font-size: 14px;">Automatización eficiente para entornos industriales exigentes. Ideal para PYMES.</p>
+                    
+                    <ul class="features" style="margin-top: 10px;">
+                        <li>Estructura compacta y versátil</li>
+                        <li>Fácil integración</li>
+                        <li>Rentable y económico</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- BOTTOM LEFT -->
+            <div class="section">
+                <h3>¿Qué incluye nuestra propuesta?</h3>
+                
+                <ul class="features">
+                    <li>Estudio personalizado de tu línea</li>
+                    <li>Selección del equipo más adecuado</li>
+                    <li>Instalación y puesta en marcha</li>
+                    <li>Formación del personal operario</li>
+                    <li>Soporte técnico y mantenimiento</li>
+                    <li>Recambios garantizados</li>
+                </ul>
+                
+                <div class="image-container">
+                    <img src="images/gripper.jpg" alt="Gripper robot" style="max-height: 180px;">
+                </div>
+            </div>
+            
+            <!-- BOTTOM RIGHT -->
+            <div class="section">
+                <h3>Resultados Garantizados</h3>
+                
+                <p>Nuestras soluciones garantizan un <span class="highlight">retorno rápido de la inversión</span> mediante:</p>
+                
+                <ul class="features">
+                    <li>Reducción de costes laborales</li>
+                    <li>Mejora de la productividad</li>
+                    <li>Menor tasa de errores</li>
+                    <li>Mayor seguridad en el trabajo</li>
+                </ul>
+                
+                <div class="image-container">
+                    <img src="images/robot-seguridad.jpg" alt="Robot seguridad" style="max-height: 180px;">
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- FOOTER -->
+        <div class="footer">
+            <h3>¿Hablamos de tu proyecto?</h3>
+            <p>Solicita tu presupuesto personalizado sin compromiso</p>
+            
+            <div class="contact">
+                <p><strong>BiTecnic</strong> - Automatización colaborativa al alcance de tu empresa</p>
+                <p>📧 info@bitecnic.com | 🌐 bitecnic-paletizer.com | 📍 Sabadell (Barcelona)</p>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
